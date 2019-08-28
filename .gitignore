@@ -1,7 +1,8 @@
 .cloud/
 .storage/
+.Trash-*/
 deps/
-images/
+www/
 tts/
 .HA_VERSION
 .uuid
