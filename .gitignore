@@ -1,6 +1,7 @@
 .cloud/
 .storage/
 .Trash-*/
+custom_components/
 deps/
 www/
 tts/
