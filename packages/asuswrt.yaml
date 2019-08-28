@@ -1,0 +1,17 @@
+asuswrt:
+  host: 192.168.1.1
+  username: admin
+  password: !secret merlin_password
+  sensors:
+    - upload
+    - download
+    - upload_speed
+    - download_speed
+
+device_tracker:
+  - platform: asuswrt
+    new_device_defaults:
+      track_new_devices: false
+      hide_if_away: true
+    interval_seconds: 5
+    consider_home: 1200

@@ -1,0 +1,18 @@
+homeassistant:
+  customize:
+    person.jacob:
+      entity_picture: "/images/people/jacob.jpg"
+    person.katelyn:
+      entity_picture: "/images/people/katelyn.jpg"
+
+person:
+  - name: Jacob
+    id: jacob
+    user_id: !secret jacob_user_id
+    device_trackers:
+      - device_tracker.jacob_phone
+  - name: Katelyn
+    id: katelyn
+    user_id: !secret katelyn_user_id
+    device_trackers:
+        - device_tracker.katelyn_phone
