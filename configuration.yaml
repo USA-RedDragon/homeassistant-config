@@ -19,6 +19,9 @@ http:
 updater:
   include_used_components: true
 
+hacs:
+  token: !secret github_access_token
+
 discovery:
 
 history:
