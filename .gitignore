@@ -6,6 +6,7 @@ deps/
 www/
 tts/
 .HA_VERSION
+.pip_progress
 .uuid
 home-assistant.log
 known_devices.yaml
