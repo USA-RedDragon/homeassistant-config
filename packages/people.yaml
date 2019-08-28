@@ -1,9 +1,9 @@
 homeassistant:
   customize:
     person.jacob:
-      entity_picture: "/images/people/jacob.jpg"
+      entity_picture: "/local/images/people/jacob.jpg"
     person.katelyn:
-      entity_picture: "/images/people/katelyn.jpg"
+      entity_picture: "/local/images/people/katelyn.jpg"
 
 person:
   - name: Jacob
