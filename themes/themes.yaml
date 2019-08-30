@@ -1,44 +1,83 @@
 
-DarkRed:
-  ### Main Interface Colors ###
-  primary-color: "#EA1111"
-  light-primary-color: "#F35858"
-  primary-background-color: "#141414"
-  secondary-background-color: var(--primary-background-color)
-  divider-color: "#2D2D2D"
-  ### Text ###
-  primary-text-color: "#EAEEF1"
-  secondary-text-color: "#EA1111"
-  text-primary-color: "#FFFFFF"
-  disabled-text-color: "#666666"
-  ### Sidebar Menu ###
-  sidebar-icon-color: "#979797"
-  sidebar-text-color: "#EAEEF1"
-  sidebar-selected-background-color: var(--primary-background-color)
-  sidebar-selected-icon-color: "#EA1111"
-  sidebar-selected-text-color: var(--sidebar-selected-icon-color)
-  ### States and Badges ###
-  state-icon-color: "#EA1111"
-  state-icon-active-color: "#FBCD41"
-  state-icon-unavailable-color: var(--disabled-text-color)
-  ### Sliders ###
-  paper-slider-knob-color: "#EA1111"
-  paper-slider-knob-start-color: var(--paper-slider-knob-color)
-  paper-slider-pin-color: var(--paper-slider-knob-color)
-  paper-slider-active-color: var(--paper-slider-knob-color)
-  paper-slider-secondary-color: var(--light-primary-color)
-  ### Labels ###
-  label-badge-background-color: "#424242"
-  label-badge-text-color: "#EAEEF1"
-  label-badge-red: "#424242"
-  ### Cards ###
-  paper-card-background-color: "#1A1A1A"
-  paper-listbox-background-color: var(--primary-background-color)
-  ### Toggles ###
-  paper-toggle-button-checked-button-color: "#EA1111"
-  paper-toggle-button-checked-bar-color: "#F36060"
-  paper-toggle-button-unchecked-button-color: "#757575"
-  paper-toggle-button-unchecked-bar-color: "#424242"
-  ### Table row ###
-  table-row-background-color: var(--primary-background-color)
-  table-row-alternative-background-color: var(--secondary-background-color)
+slate:
+    # Main colors
+    primary-color: '#b92938'
+    accent-color: '#29b9aa'
+    dark-primary-color: '#b92938'
+    light-primary-color: '#b92938'
+    # Text colors
+    primary-text-color: '#FFFFFF'
+    text-primary-color: 'var(--primary-text-color)'
+    secondary-text-color: '#29b9aa'
+    disabled-text-color: '#777777'
+    label-badge-border-color: 'green'
+    # Sidebar
+    sidebar-icon-color: '#777777'
+    # Background colors
+    primary-background-color: '#222222'
+    secondary-background-color: '#222222'
+    divider-color: 'rgba(0, 0, 0, .12)'
+    table-row-background-color: '#292929'
+    table-row-alternative-background-color: '#292929'
+    # Nav Menu
+    paper-listbox-color: '#777777'
+    paper-listbox-background-color: '#141414'
+    paper-grey-50: 'var(--primary-text-color)'
+    paper-grey-200: '#222222'
+    # Paper card
+    paper-card-header-color: '#b92938'
+    paper-card-background-color: 'rgba(41,41,41,.7)'
+    paper-dialog-background-color: '#292929'
+    paper-item-icon-color: 'var(--primary-text-color)'
+    paper-item-icon-active-color: '#29b9aa'
+    paper-item-icon_-_color: 'green'
+    paper-item-selected_-_background-color: '#292929'
+    paper-tabs-selection-bar-color: 'green'
+    # Labels
+    label-badge-red: 'var(--primary-color)'
+    label-badge-text-color: 'var(--primary-text-color)'
+    label-badge-background-color: '#222222'
+    # Switches
+    paper-toggle-button-checked-button-color: '#b92938'
+    paper-toggle-button-checked-bar-color: '#b92938'
+    paper-toggle-button-checked-ink-color: '#b92938'
+    paper-toggle-button-unchecked-button-color: 'var(--disabled-text-color)'
+    paper-toggle-button-unchecked-bar-color: 'var(--disabled-text-color)'
+    paper-toggle-button-unchecked-ink-color: 'var(--disabled-text-color)'
+    # Sliders
+    paper-slider-knob-color: '#b92938'
+    paper-slider-knob-start-color: '#b92938'
+    paper-slider-pin-color: '#b92938'
+    paper-slider-active-color: '#b92938'
+    paper-slider-container-color: 'linear-gradient(var(--primary-background-color), var(--secondary-background-color)) no-repeat'
+    paper-slider-secondary-color: 'var(--secondary-background-color)'
+    paper-slider-disabled-active-color: 'var(--disabled-text-color)'
+    paper-slider-disabled-secondary-color: 'var(--disabled-text-color)'
+    # Google colors
+    google-red-500: '#29b9aa'
+    google-green-500: '#b92938'
+    #Changes to fix history/logbook menus
+    lumo-primary-text-color: '#b92938'
+    lumo-secondary-text-color: '#b92938'
+    lumo-primary-color: '#b92938'
+    #Calendar day numbers
+    lumo-body-text-color: '#29b9aa'
+    #Calendar/Date-Picker Background
+    lumo-base-color: '#222222'
+    #Month/Year header
+    lumo-header-text-color: 'var(--lumo-body-text-color)'
+    #DayOfWeek Header
+    lumo-tertiary-text-color: 'var(--lumo-body-text-color)'
+    lumo-shade: '#222222'
+    lumo-shade-90pct: 'rgba(34, 34, 34, .9)'
+    lumo-shade-80pct: 'rgba(34, 34, 34, .8)'
+    lumo-shade-70pct: 'rgba(34, 34, 34, .7)'
+    lumo-shade-60pct: 'rgba(34, 34, 34, .6)'
+    lumo-shade-50pct: 'rgba(34, 34, 34, .5)'
+    lumo-shade-40pct: 'rgba(34, 34, 34, .4)'
+    lumo-shade-30pct: 'rgba(34, 34, 34, .3)'
+    lumo-shade-20pct: 'rgba(34, 34, 34, .2)'
+    lumo-shade-10pct: 'rgba(34, 34, 34, .1)'
+    lumo-shade-5pct: 'rgba(34, 34, 34, .05)'
+    lumo-tint-5pct: '#222222'
+    ha-card-border-radius: '5px'
