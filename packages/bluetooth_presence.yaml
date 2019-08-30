@@ -1,0 +1,20 @@
+sensor:
+- platform: mqtt
+  state_topic: 'monitor/ble/jacob'
+  value_template: '{{ value_json.confidence }}'
+  unit_of_measurement: '%'
+  name: 'Jacob'
+- platform: mqtt
+  state_topic: 'monitor/ble/katelyn'
+  value_template: '{{ value_json.confidence }}'
+  unit_of_measurement: '%'
+  name: 'Katelyn'
+
+- platform: min_max
+  name: "Home Occupancy Confidence"
+  type: max
+  round_digits: 0
+  entity_ids:
+    - sensor.Jacob
+    - sensor.Katelyn
+
