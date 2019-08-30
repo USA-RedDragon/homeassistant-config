@@ -10,11 +10,9 @@ person:
     id: jacob
     user_id: !secret jacob_user_id
     device_trackers:
-      - device_tracker.jacob_phone
       - device_tracker.jacob_bluetooth
   - name: Katelyn
     id: katelyn
     user_id: !secret katelyn_user_id
     device_trackers:
-      - device_tracker.katelyn_phone
       - device_tracker.katelyn_bluetooth
