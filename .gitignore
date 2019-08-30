@@ -3,6 +3,9 @@
 .Trash-*/
 custom_components/
 deps/
+!node-red/
+node-red/*
+!node-red/flows.json
 www/
 tts/
 .HA_VERSION
