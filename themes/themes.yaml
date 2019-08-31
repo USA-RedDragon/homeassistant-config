@@ -1,5 +1,6 @@
 
 slate:
+    background-image: 'center / cover no-repeat url("/local/backgrounds/background.jpg") fixed'
     # Main colors
     primary-color: '#b92938'
     accent-color: '#29b9aa'
@@ -26,7 +27,7 @@ slate:
     paper-grey-200: '#222222'
     # Paper card
     paper-card-header-color: '#b92938'
-    paper-card-background-color: 'rgba(41,41,41,.7)'
+    paper-card-background-color: 'rgba(41,41,41,.8)'
     paper-dialog-background-color: '#292929'
     paper-item-icon-color: 'var(--primary-text-color)'
     paper-item-icon-active-color: '#29b9aa'
@@ -80,4 +81,4 @@ slate:
     lumo-shade-10pct: 'rgba(34, 34, 34, .1)'
     lumo-shade-5pct: 'rgba(34, 34, 34, .05)'
     lumo-tint-5pct: '#222222'
-    ha-card-border-radius: '5px'
+    ha-card-border-radius: '20px'
