@@ -1,0 +1,30 @@
+cover:
+  platform: opengarage
+  covers:
+    garage:
+      host: !secret opengarage_host
+      device_key: !secret opengarage_device_key
+      name: Garage Door
+
+device_tracker:
+  - platform: mqtt
+    devices:
+      jacob_car: 'location/car/jacob'
+
+sensor:
+- platform: mqtt
+  state_topic: jacob_garage/OUT/STATE
+  name: jacob_garage_state
+- platform: mqtt
+  state_topic: jacob_garage/OUT/DIST
+  name: jacob_garage_distance
+- platform: template
+  sensors:
+    jacob_car:
+      unit_of_measurement: '%'
+      value_template: >-
+        {% if is_state('device_tracker.jacob_car', 'home') %}
+          100
+        {% else %}
+          0
+        {% endif %}
