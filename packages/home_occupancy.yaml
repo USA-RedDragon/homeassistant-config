@@ -1,0 +1,9 @@
+sensor:
+- platform: min_max
+  name: "Home Occupancy Confidence"
+  type: max
+  round_digits: 0
+  entity_ids:
+    - sensor.jacob_bluetooth
+    - sensor.katelyn_bluetooth
+    - sensor.jacob_car
