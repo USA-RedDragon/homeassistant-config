@@ -1,10 +1,25 @@
 cover:
-  platform: opengarage
+  - platform: template
   covers:
-    garage:
-      host: !secret opengarage_host
-      device_key: !secret opengarage_device_key
-      name: Garage Door
+      garage_door:
+        friendly_name: Garage Door
+        value_template: >
+          {{ (not is_state('sensor.garage_sr04_distance', 'unavailable'))
+            and states('sensor.garage_sr04_distance')|float < 50 }}
+        icon_template: >-
+          {% if is_state('cover.garage_door', 'open') %}
+            mdi:garage-open
+          {% else %}
+            mdi:garage
+          {% endif %}
+        open_cover:
+          service: switch.turn_on
+          data:
+            entity_id: switch.garage
+        close_cover:
+          service: switch.turn_on
+          data:
+            entity_id: switch.garage
 
 device_tracker:
   - platform: mqtt
