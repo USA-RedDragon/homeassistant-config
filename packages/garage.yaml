@@ -6,12 +6,7 @@ cover:
         value_template: >
           {{ (not is_state('sensor.garage_sr04_distance', 'unavailable'))
             and states('sensor.garage_sr04_distance')|float < 50 }}
-        icon_template: >-
-          {% if is_state('cover.garage_door', 'open') %}
-            mdi:garage-open
-          {% else %}
-            mdi:garage
-          {% endif %}
+        device_class: garage
         open_cover:
           service: switch.turn_on
           data:
