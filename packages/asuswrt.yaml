@@ -14,4 +14,4 @@ device_tracker:
       track_new_devices: false
       hide_if_away: true
     interval_seconds: 5
-    consider_home: 1200
+    consider_home: 5
