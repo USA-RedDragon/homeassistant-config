@@ -1,18 +1,17 @@
 cover:
   - platform: template
-  covers:
+    covers:
       garage_door:
         friendly_name: Garage Door
         value_template: >
-          {{ (not is_state('sensor.garage_sr04_distance', 'unavailable'))
-            and states('sensor.garage_sr04_distance')|float < 50 }}
+          {{ (not is_state('sensor.garage_sr04_distance', 'unavailable')) and states('sensor.garage_sr04_distance')|float < 50 }}
         device_class: garage
         open_cover:
-          service: switch.turn_on
+          service_template: "switch.turn_{{ 'off' if states('cover.garage_door') == 'open' else 'on' }}"
           data:
             entity_id: switch.garage
         close_cover:
-          service: switch.turn_on
+          service_template: "switch.turn_{{ 'off' if states('cover.garage_door') == 'closed' else 'on' }}"
           data:
             entity_id: switch.garage
 
@@ -22,12 +21,6 @@ device_tracker:
       jacob_car: 'location/car/jacob'
 
 sensor:
-- platform: mqtt
-  state_topic: jacob_garage/OUT/STATE
-  name: jacob_garage_state
-- platform: mqtt
-  state_topic: jacob_garage/OUT/DIST
-  name: jacob_garage_distance
 - platform: template
   sensors:
     jacob_car:
@@ -38,3 +31,6 @@ sensor:
         {% else %}
           0
         {% endif %}
+- platform: mqtt
+  state_topic: state/car/jacob
+  name: jacob_car_state
