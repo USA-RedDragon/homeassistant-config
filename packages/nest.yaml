@@ -1,0 +1,7 @@
+badnest:
+  email: !secret nest_email
+  password: !secret nest_password
+
+climate:
+  - platform: badnest
+    scan_interval: 10
