@@ -82,3 +82,5 @@ slate:
     lumo-shade-5pct: 'rgba(34, 34, 34, .05)'
     lumo-tint-5pct: '#222222'
     ha-card-border-radius: '20px'
+    card-background-color: "var(--paper-card-background-color)"
+    mdc-data-table__tabler: "var(--primary-background-color)"
