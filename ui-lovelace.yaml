@@ -1,0 +1,112 @@
+resources:
+  - type: module
+    url: /community_plugin/popup-backdrop-filter/popup-backdrop-filter.js
+  - type: js
+    url: /community_plugin/lovelace-card-tools/card-tools.js
+  - type: js
+    url: /community_plugin/lovelace-auto-entities/auto-entities.js
+  - type: module
+    url: /community_plugin/mini-media-player/mini-media-player-bundle.js
+  - type: module
+    url: /community_plugin/simple-thermostat/simple-thermostat.js
+title: Home
+views:
+  - background: var(--background-image)
+    badges:
+      - sun.sun
+    cards:
+      - card:
+          title: People at Home
+          type: glance
+        filter:
+          include:
+            - entity_id: person.*
+              state: home
+        show_empty: false
+        type: 'custom:auto-entities'
+      - entity: weather.home
+        type: weather-forecast
+      - entity: cover.garage_door
+        hold_action:
+          action: more-info
+        icon_height: 32px
+        name: Garage Door
+        show_icon: true
+        show_name: true
+        tap_action:
+          action: toggle
+        type: entity-button
+      - entities:
+          - entity: input_boolean.zigbee_permit_join
+          - entity: timer.zigbee_permit_join
+          - entity: sensor.bridge_state
+        show_header_toggle: false
+        title: Zigbee
+        type: entities
+      - card:
+          show_header_toggle: false
+          title: Media Players
+          type: entities
+        filter:
+          exclude:
+            - state: idle
+            - state: 'off'
+            - state: unavailable
+          include:
+            - entity_id: media_player.*
+              options:
+                group: true
+                type: 'custom:mini-media-player'
+        show_empty: false
+        type: 'custom:auto-entities'
+      - entity: climate.nest
+        modes:
+          auto: true
+          cool: true
+          heat: true
+        step_size: 1
+        type: 'custom:simple-thermostat'
+      - type: vertical-stack
+        cards:
+          - type: light
+            entity: light.bedroom_accent
+          - type: glance
+            entities:
+              - entity: sensor.0x00178801044aace9_linkquality
+            show_name: false
+            show_icon: false
+            title: Bed Accent Link Quality
+            show_state: true
+      - type: conditional
+        conditions:
+          - entity: person.jacob
+            state: home
+        card:
+          type: glance
+          entities:
+            - sensor.home_to_work_travel_time
+      - type: conditional
+        conditions:
+          - entity: person.jacob
+            state: not_home
+        card:
+          type: glance
+          entities:
+            - sensor.work_to_home_travel_time
+      - type: history-graph
+        entities:
+          - entity: sensor.pi_hole_ads_blocked_today
+        hours_to_show: 24
+        refresh_interval: 0
+    modes:
+      another_mode:
+        include: false
+      'off':
+        icon: false
+        name: Make it cold
+      'on':
+        icon: 'mdi:whitewalker'
+        name: false
+      some_mode: false
+    path: default_view
+    title: Home
