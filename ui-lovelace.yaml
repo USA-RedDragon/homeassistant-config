@@ -59,7 +59,7 @@ views:
                 type: 'custom:mini-media-player'
         show_empty: false
         type: 'custom:auto-entities'
-      - entity: climate.nest
+      - entity: climate.nest_thermostat
         modes:
           auto: true
           cool: true

@@ -1,6 +1,7 @@
 badnest:
-  email: !secret nest_email
-  password: !secret nest_password
+  issue_token: !secret nest_issue_token
+  cookie: !secret nest_cookie
+  api_key: !secret nest_api_key
 
 climate:
   - platform: badnest
