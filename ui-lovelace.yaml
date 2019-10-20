@@ -59,13 +59,16 @@ views:
                 type: 'custom:mini-media-player'
         show_empty: false
         type: 'custom:auto-entities'
-      - entity: climate.nest_thermostat
-        modes:
-          auto: true
-          cool: true
-          heat: true
-        step_size: 1
-        type: 'custom:simple-thermostat'
+      - type: vertical-stack
+        cards:
+          - type: thermostat
+            entity: climate.09aa01ac351806dx
+            name: "Living Room"
+          - type: glance
+            entities:
+              - entity: sensor.18b430c70938305c
+            title: Server Closet
+            show_name: false
       - type: vertical-stack
         cards:
           - type: light
@@ -98,15 +101,5 @@ views:
           - entity: sensor.pi_hole_ads_blocked_today
         hours_to_show: 24
         refresh_interval: 0
-    modes:
-      another_mode:
-        include: false
-      'off':
-        icon: false
-        name: Make it cold
-      'on':
-        icon: 'mdi:whitewalker'
-        name: false
-      some_mode: false
     path: default_view
     title: Home
